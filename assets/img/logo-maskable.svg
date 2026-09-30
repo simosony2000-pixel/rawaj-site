@@ -1,0 +1,28 @@
+<!-- RAWÂJ maskable icon.
+     A separate file on purpose: a maskable icon is masked by the operating
+     system, so the background has to bleed to all four edges (the rounded
+     corners of logo.svg would show as transparent notches) and the artwork
+     has to sit inside the inner 80% safe circle, or Android crops the mark
+     off at the sides. Same palette, same shape, different box. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="RAWÂJ">
+  <defs>
+    <linearGradient id="rawajMask" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#5EEAD4"/>
+      <stop offset="55%"  stop-color="#2DD4BF"/>
+      <stop offset="100%" stop-color="#14B8A6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- full bleed, no radius -->
+  <rect width="64" height="64" fill="url(#rawajMask)"/>
+
+  <!-- artwork pulled in to ~64% so it clears the safe circle -->
+  <g transform="translate(32 32) scale(0.64) translate(-32 -32)">
+    <path d="M15 40 L32 25.5 L49 40"
+          fill="none" stroke="#04211F" stroke-width="6"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M15 50 L32 35.5 L49 50"
+          fill="none" stroke="#04211F" stroke-width="6"
+          stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+  </g>
+</svg>

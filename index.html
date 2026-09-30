@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>RAWÂJ — تسويق أعمالك بالذكاء الاصطناعي</title>
+<meta name="description" content="RAWÂJ كيجيب ليك آفاق حقيقيين من السوق ديالك، كل واحد برسالة مخصصة لقطاعو. بلا سبام، ومن بريدك أنت." />
+<meta name="theme-color" content="#0B1220" />
+<link rel="canonical" href="https://rawaj.ai/" />
+
+<!-- Open Graph. The image is the ad creative, so a shared link looks like the ad. -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="RAWÂJ" />
+<meta property="og:title" content="RAWÂJ — تسويق أعمالك بالذكاء الاصطناعي" />
+<meta property="og:description" content="آفاق حقيقيين من السوق ديالك، رسالة مخصصة لكل قطاع، بلا سبام." />
+<meta property="og:image" content="assets/img/og-rawaj.png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- Rendered from assets/img/logo.svg by tools/make_favicon.py, so the mark
+     stays the one source of truth. 32px is what browsers and tab strips use;
+     the old generic icon.png was the Expo placeholder. -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-180.png" />
+<link rel="manifest" href="site.webmanifest" />
+<link rel="stylesheet" href="assets/css/site.css" />
+<link rel="stylesheet" href="assets/css/visuals.css" />
+<script>window.RAWAJ_API_BASE = "https://value-genius-cardiff-port.trycloudflare.com";</script>
+<script src="assets/js/i18n.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+</head>
+<body>
+
+<!-- icon sprite (Lucide, ISC) -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+<defs>
+<symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11Z"/><path d="m21.854 2.147-10.94 10.939"/></symbol>
+<!-- A speech bubble with a handset, not a copy of the WhatsApp mark. Lucide
+     dropped brand icons on purpose (trademark), and a green bubble plus a
+     handset is the pattern people already recognise, so it reads the same
+     without shipping someone else's logo. -->
+<symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5Z"/><path d="M8.5 9.2c0 3.1 2.6 5.7 5.7 5.7.5 0 1-.4 1-1 0-.2-.1-.4-.3-.5l-1.1-.8c-.2-.2-.5-.2-.7 0l-.4.4c-.8-.4-1.4-1-1.8-1.8l.4-.4c.2-.2.2-.5 0-.7l-.8-1.1c-.1-.2-.3-.3-.5-.3h-.4c-.6 0-1.1.5-1.1 1.1Z"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.2 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></symbol>
+<symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-trending-up" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></symbol>
+<symbol id="i-user-x" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="22" x2="16" y1="11" y2="17"/><line x1="16" x2="22" y1="11" y2="17"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+<symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></symbol>
+<symbol id="i-chevron-down" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" x2="22" y1="12" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></symbol>
+<symbol id="i-building" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></symbol>
+<symbol id="i-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+<symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+<symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
+<symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></symbol>
+<symbol id="i-file-text" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></symbol>
+<symbol id="i-scale" viewBox="0 0 24 24"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></symbol>
+</defs>
+</svg>
+
+<header class="nav">
+  <div class="shell">
+    <a class="logo logo-mark" href="#top">
+      <img src="assets/img/logo.svg" alt="" width="26" height="26" />
+      <span>RAWÂJ<span class="tld">.AI</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#problem" data-i18n="nav.problem">المشكل</a>
+      <a href="#funnel" data-i18n="fun.tag">المسار ديال رسالة وحدة</a>
+      <a href="#how" data-i18n="nav.how">كيفاش كيخدم</a>
+      <a href="#features" data-i18n="nav.features">الخدمات</a>
+      <a href="#pricing" data-i18n="nav.pricing">الأسعار</a>
+      <a href="#faq" data-i18n="nav.faq">أسئلة</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="lang-btn" id="langBtn" type="button" aria-label="Switch language">
+        <svg class="icon"><use href="#i-globe"/></svg><span id="langLabel">EN</span>
+      </button>
+      <a class="btn" href="#contact" data-i18n="nav.cta">راسلنا</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false">
+        <svg class="icon"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-drawer" id="navDrawer">
+  <a href="#problem" data-i18n="nav.problem">المشكل</a>
+  <a href="#funnel" data-i18n="fun.tag">المسار ديال رسالة وحدة</a>
+  <a href="#how" data-i18n="nav.how">كيفاش كيخدم</a>
+  <a href="#features" data-i18n="nav.features">الخدمات</a>
+  <a href="#pricing" data-i18n="nav.pricing">الأسعار</a>
+  <a href="#faq" data-i18n="nav.faq">أسئلة</a>
+  <a class="btn" href="#contact" data-i18n="nav.cta">راسلنا</a>
+</div>
+
+<main id="top">
+
+  <!-- ============================== hero ============================== -->
+  <section class="hero">
+    <div class="shell hero-split">
+      <div>
+        <span class="tag" data-i18n="hero.badge">تسويق خارجي بالذكاء الاصطناعي</span>
+        <h1>
+          <span data-i18n="hero.h1a">شركتك عندها</span>
+          <span class="hl" data-i18n="hero.h1b">زوينة</span><br />
+          <span data-i18n="hero.h1c">ولكن شحال من الناس كيعرفوها؟</span>
+        </h1>
+        <p class="sub" data-i18n="hero.sub">RAWÂJ محرّك كيقلب السوق ديالك، كيجيب ليك أسماء الشركات، وكيبعث رسالة مخصصة لكل واحد على ديال قطاعو — من بريدك أنت، بلا سبام.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#how"><svg class="icon"><use href="#i-arrow-left"/></svg><span data-i18n="hero.cta">شوف كيفاش كيخدم</span></a>
+          <a class="btn btn--ghost" href="#pricing" data-i18n="hero.cta2">استفسر على العرض</a>
+        </div>
+        <p class="hero-note"><svg class="icon"><use href="#i-sparkles"/></svg><span data-i18n="hero.note">الرسائل كتصرّح بأنها من مساعد ذكي. ما كنخفّيش.</span></p>
+
+        <!-- Real numbers from /api/sales/status?mission=REAL_SALES_15.
+             Revenue is deliberately absent: real_revenue is 0, and putting a
+             revenue figure here would make every other number on the page a
+             lie. These four are database and hygiene facts. -->
+        <div class="stats" data-stats>
+          <div class="stat"><div class="n" data-stat="leads_total">5 227</div><div class="l" data-i18n="stat.leads">شركة فالدليل</div></div>
+          <div class="stat"><div class="n" data-stat="active">4 801</div><div class="l" data-i18n="stat.active">نشطة دابا</div></div>
+          <div class="stat"><div class="n" data-stat="dnc">676</div><div class="l" data-i18n="stat.dnc">محمية فـ DNC</div></div>
+          <div class="stat"><div class="n" data-stat="bounces">0</div><div class="l" data-i18n="stat.bounces">بونس</div></div>
+        </div>
+      </div>
+
+      <!-- What the prospect actually receives. Unrolled on purpose: the
+           personalisation is the product, and a collapsed preview hides it. -->
+      <div class="inbox" data-i18n-aria="msg.aria">
+        <div class="inbox-bar">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="addr">boite@entreprise.ma</span>
+        </div>
+        <div class="msg">
+          <div class="msg-head">
+            <div class="msg-av">R</div>
+            <div class="msg-meta">
+              <div class="msg-from" data-i18n="msg.from">Amine — RAWÂJ</div>
+              <div class="msg-to">to: direction@entreprise.ma</div>
+            </div>
+          </div>
+          <div class="msg-subj" data-i18n="msg.subj">موقع ديالكم — فرصة فالقطاع ديالكم</div>
+          <div class="msg-body">
+            <p data-i18n="msg.b1">السلام عليكم،</p>
+            <p data-i18n="msg.b2">أنا <span class="hl">Amine</span>، وكنخدم مع <span class="hl">RAWÂJ</span> — خدمة كتجيب للشركات مغربية عملاء جدد فـ<span class="hl" data-i18n="msg.sector">قطاعك</span></p>
+            <p data-i18n="msg.b3">شفت الموقع ديالكم وعجبني <span class="hl" data-i18n="msg.good">الخدمة اللي كتقدمو</span>. نقدرو نوصّلوه لعدد من <span class="hl" data-i18n="msg.people">صنّاع القرار</span> فالقطاع.</p>
+            <p data-i18n="msg.b4">واش نبعث ليكم ديمو قصير؟</p>
+            <div class="msg-disclosure">
+              <svg class="icon"><use href="#i-sparkles"/></svg>
+              <span data-i18n="msg.disclosure">هاد الرسالة كتبعثت بمساعدة ذكي. إلا ما بغيتيش، جاوب «لا» ونحيدوك نهائياً.</span>
+            </div>
+            <div class="msg-actions">
+              <a class="btn" href="#contact" data-i18n="msg.reply">واخا، عيط ليا</a>
+              <a class="btn btn--ghost" href="#contact" data-i18n="msg.stop">لا شكراً</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= strip ============================== -->
+  <section class="strip">
+    <div class="shell">
+      <div class="strip-item"><svg class="icon"><use href="#i-database"/></svg><span data-i18n="strip.1">آفاق حقيقيين من الدليل المغربي</span></div>
+      <div class="strip-item"><svg class="icon"><use href="#i-file-text"/></svg><span data-i18n="strip.2">رسالة مخصصة لكل قطاع</span></div>
+      <div class="strip-item"><svg class="icon"><use href="#i-shield-check"/></svg><span data-i18n="strip.3">بلا سبام — حماية DNC</span></div>
+      <div class="strip-item"><svg class="icon"><use href="#i-trending-up"/></svg><span data-i18n="strip.4">تقرير شهري واضح</span></div>
+    </div>
+  </section>
+
+  <!-- ============================ problem ============================ -->
+  <section id="problem">
+    <div class="shell">
+      <div class="sec-head">
+        <span class="tag" data-i18n="problem.tag">المشكل</span>
+        <h2 data-i18n="problem.h">المنتج مزيان. ولكن ما كيوصلش.</h2>
+      </div>
+      <div class="problem-grid">
+        <div class="problem-card"><div class="num">1</div><p data-i18n="problem.p1">شركات مغربية عندها منتجات وخدمات زوينة — ولكن العميل ما كيشوفهاش. الإعلانات غالية، والنتائج عشوائية.</p></div>
+        <div class="problem-card"><div class="num">2</div><p data-i18n="problem.p2">إرسال رسائل عامة لكل واحد (mass email) كيعطي سبام، وضياع فلوس، وأحياناً حرق للعنوان ديالك.</p></div>
+        <div class="problem-card"><div class="num">3</div><p data-i18n="problem.p3">صاحب القرار المغربي كيتسناى شي حد يفهم قطاعو — ماشي قالب واحد مكرر.</p></div>
+      </div>
+      <p class="problem-out" data-i18n="problem.out">النتيجة: خدمة زوينة كتبقى فالرف، والشركة كتبقى بلا زبون.</p>
+    </div>
+  </section>
+
+  <!-- ============================= funnel ============================== -->
+  <!-- The narrowing widths are the point: it is a funnel, not five equal
+       boxes, and the last step is highlighted because that is the one the
+       client actually pays for. -->
+  <section id="funnel">
+    <div class="shell">
+      <div class="sec-head">
+        <span class="tag" data-i18n="fun.tag">المسار ديال رسالة وحدة</span>
+        <h2 data-i18n="fun.h">من الدليل حتى الجواب</h2>
+      </div>
+      <div class="funnel">
+        <div class="funnel-step"><span class="ic"><svg class="icon"><use href="#i-database"/></svg></span><h4 data-i18n="fun.1t">الدليل</h4><p data-i18n="fun.1d">نجيبو الأسماء</p></div>
+        <div class="funnel-step"><span class="ic"><svg class="icon"><use href="#i-shield-check"/></svg></span><h4 data-i18n="fun.2t">التنقية</h4><p data-i18n="fun.2d">نحيدو المكرر والبونس</p></div>
+        <div class="funnel-step"><span class="ic"><svg class="icon"><use href="#i-file-text"/></svg></span><h4 data-i18n="fun.3t">الكتابة</h4><p data-i18n="fun.3d">رسالة على ديال القطاع</p></div>
+        <div class="funnel-step"><span class="ic"><svg class="icon"><use href="#i-send"/></svg></span><h4 data-i18n="fun.4t">الإرسال</h4><p data-i18n="fun.4d">من بريدك بمعدل آمن</p></div>
+        <div class="funnel-step"><span class="ic"><svg class="icon"><use href="#i-mail"/></svg></span><h4 data-i18n="fun.5t">التتبع</h4><p data-i18n="fun.5d">نعلموك بالرد</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== how =============================== -->
+  <section id="how">
+    <div class="shell">
+      <div class="sec-head">
+        <span class="tag" data-i18n="how.tag">كيفاش كيخدم</span>
+        <h2 data-i18n="how.h">أربع خطوات، وأنا كنخدم</h2>
+      </div>
+      <div class="how-grid">
+        <div class="how-card"><h3 data-i18n="how.s1t">كنحدد السوق</h3><p data-i18n="how.s1d">تعرفنا بالمدينة والقطاع ديالك (مثال: محلات في كازا).</p></div>
+        <div class="how-card"><h3 data-i18n="how.s2t">كنجيب الآفاق</h3><p data-i18n="how.s2d">كنجيبو الأسماء والإيميلات من دليل الشركات، ونحيدو المكرر.</p></div>
+        <div class="how-card"><h3 data-i18n="how.s3t">كنكتب الرسالة</h3><p data-i18n="how.s3d">رسالة مخصصة لكل قطاع، فيها شي حاجة تخصّ صاحب القرار.</p></div>
+        <div class="how-card"><h3 data-i18n="how.s4t">كنتابع الردود</h3><p data-i18n="how.s4d">كنردّو عليك: جواب، موعد، اعتراض، ولا بونس. وأنت تاخد القرار.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= video =============================== -->
+  <!-- A real film, not a mock-up: tools/make_promo.py drives this very page in
+       a browser, shoots it at 1920x1080 and assembles the mp4 with ffmpeg. One
+       file per language; site.js swaps the source (and the poster) when the
+       visitor flips, because <source> cannot be re-evaluated once the browser
+       has picked one. preload="none" so a visitor who never presses play does
+       not download 6 MB of film. -->
+  <section id="video">
+    <div class="shell">
+      <div class="sec-head">
+        <span class="tag" data-i18n="video.tag">فيديو</span>
+        <h2 data-i18n="video.h">شوفو خدّام بعينك</h2>
+        <p data-i18n="video.p">أقل من دقيقة كتوريوك المسار كامل: من فين كنجيبو الأسماء، حتىاش كتوصل الرسالة.</p>
+      </div>
+      <figure class="promo">
+        <div class="promo-frame">
+          <video id="promoVideo" class="promo-video" controls playsinline preload="none"
+                 width="1920" height="1080" poster="assets/img/promo-poster-ar.jpg"
+                 data-ar-src="assets/video/rawaj-promo-ar.mp4"
+                 data-en-src="assets/video/rawaj-promo-en.mp4"
+                 data-ar-poster="assets/img/promo-poster-ar.jpg"
+                 data-en-poster="assets/img/promo-poster-en.jpg"
+                 data-i18n-aria="video.aria">
+            <source src="assets/video/rawaj-promo-ar.mp4" type="video/mp4" />
+            <p data-i18n="video.fallback">متصفحك ما كيشغلش الفيديو.</p>
+          </video>
+        </div>
+        <figcaption class="promo-cap">
+          <span class="promo-dur"><svg class="icon"><use href="#i-clock"/></svg><span data-i18n="video.duration">أقل من دقيقة</span></span>
+          <span data-i18n="video.note">كل لقطة من الموقع الحقيقي، بلا تمثيل.</span>
+          <a class="promo-dl" id="promoDownload" href="assets/video/rawaj-promo-ar.mp4" download data-i18n="video.download">حمّل الفيديو</a>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- =========================== live visits =========================== -->
+  <!-- Counted on our own server: POST /api/visits writes a salted hash of a
+       random id the browser minted, and returns the numbers it counted. No IP,
+       no user agent, no third party, and no figure is ever hard-coded here.
+       The section ships hidden and only appears once the server has answered,
+       so an unreachable API means the band disappears rather than lying. -->
+  <section class="livebar" id="visits" data-visits hidden>
+    <div class="shell">
+      <div class="livebar-head">
+        <span class="live-dot" aria-hidden="true"></span>
+        <h2 data-i18n="visits.h">من كيشوف RAWÂJ</h2>
+      </div>
+      <div class="livegrid">
+        <div class="live"><div class="n" data-visit="today_visitors">0</div><div class="l" data-i18n="visits.today">زوار اليوم</div></div>
+        <div class="live"><div class="n" data-visit="active_now">0</div><div class="l" data-i18n="visits.active">دابا على الموقع</div></div>
+        <div class="live"><div class="n" data-visit="today_views">0</div><div class="l" data-i18n="visits.views">زيارات اليوم</div></div>
+        <div class="live"><div class="n" data-visit="total_visitors">0</div><div class="l" data-i18n="visits.total">مجموع الزوار</div></div>
+      </div>
+      <p class="live-note" data-i18n="visits.note">كنحسبو كل زائر مرة وحدة فنهار، وما كنخزنو حتى عنوان ديالك. الأرقام محفوظة فـ قاعدة بيانات خاصة بالموقع.</p>
+    </div>
+  </section>
+
+  <!-- ============================ features ============================ -->
+  <section id="features">
+    <div class="shell">
+      <div class="sec-head">
+        <span class="tag" data-i18n="feat.tag">الخدمات</span>
+        <h2 data-i18n="feat.h">شنو كتدفعو ليه</h2>
+      </div>
+      <div class="feat-grid">
+        <div class="feat-card"><span class="ic"><svg class="icon"><use href="#i-database"/></svg></span><h3 data-i18n="feat.f1t">قاعدة آفاق</h3><p data-i18n="feat.f1d">صيد مستمر من السوق المغربي، مع تحديث دوري.</p></div>
+        <div class="feat-card"><span class="ic"><svg class="icon"><use href="#i-file-text"/></svg></span><h3 data-i18n="feat.f2t">رسائل مخصصة</h3><p data-i18n="feat.f2d">قالب تلقائي مخصص حسب القطاع والمدينة، بتوقيعك.</p></div>
+        <div class="feat-card"><span class="ic"><svg class="icon"><use href="#i-send"/></svg></span><h3 data-i18n="feat.f3t">إرسال من بريدك</h3><p data-i18n="feat.f3d">من بريد Gmail ديالك أنت — بالنيابة عنك وبمعدلات آمنة.</p></div>
+        <div class="feat-card"><span class="ic"><svg class="icon"><use href="#i-mail"/></svg></span><h3 data-i18n="feat.f4t">متابعة الردود</h3><p data-i18n="feat.f4d">نرصدو الردود: جواب، موعد، اعتراض، أو بونس.</p></div>
+        <div class="feat-card"><span class="ic"><svg class="icon"><use href="#i-shield-check"/></svg></span><h3 data-i18n="feat.f5t">حماية السمعة</h3><p data-i18n="feat.f5d">لائحة DNC + رصد البونس + منع السبام.</p></div>
+        <div class="feat-card"><span class="ic"><svg class="icon"><use href="#i-trending-up"/></svg></span><h3 data-i18n="feat.f6t">تقرير شهري</h3><p data-i18n="feat.f6d">شحال رسالة، شحال رد، شحال موعد.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== why =============================== -->
+  <section id="why">
+    <div class="shell">
+      <div class="sec-head">
+        <span class="tag" data-i18n="why.tag">علاش RAWÂJ</span>
+        <h2 data-i18n="why.h">الفرق الجوهري</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card"><svg class="icon"><use href="#i-target"/></svg><div><h3 data-i18n="why.w1t">أرقام حقيقية، ماشي وعود</h3><p data-i18n="why.w1d">كل اسم من دليل فعلي، بالمعطيات ديالو. ما كنختلقوش ولا كنجمعوش.</p></div></div>
+        <div class="why-card"><svg class="icon"><use href="#i-file-text"/></svg><div><h3 data-i18n="why.w2t">رسالة تفهم القطاع</h3><p data-i18n="why.w2d">رسالة المحامي ≠ رسالة شركة الإعلانات ≠ رسالة السيريغرافيا.</p></div></div>
+        <div class="why-card"><svg class="icon"><use href="#i-scale"/></svg><div><h3 data-i18n="why.w3t">صدق معلن</h3><p data-i18n="why.w3d">كنصرّحو أن الرسالة من مساعد ذكي. ما كننكروش — هادشي هو اللي كيبني ثقة طويلة.</p></div></div>
+        <div class="why-card"><svg class="icon"><use href="#i-user-x"/></svg><div><h3 data-i18n="why.w4t">حماية من أول يوم</h3><p data-i18n="why.w4d">كل عنوان طاح فالبونس ولا رد بـ «لا» كيتحيد نهائياً.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ pricing ============================= -->
+  <section id="pricing">
+    <div class="shell">
+      <div class="sec-head">
+        <span class="tag" data-i18n="price.tag">الأسعار</span>
+        <h2 data-i18n="price.h">باقات واضحة</h2>
+        <p data-i18n="price.sub">بلا رسوم خفية. وبلا التزام طويل.</p>
+      </div>
+      <div class="price-grid">
+
+        <div class="price-card">
+          <div class="pname" data-i18n="price.p1n">البداية</div>
+          <div class="amount">1 500<span style="font-size:.5em"> د.م</span></div>
+          <div class="per" data-i18n="price.per">/ شهر</div>
+          <ul>
+            <li><svg class="icon"><use href="#i-check"/></svg><span data-i18n="price.lead">آفاق / شهر</span>: <strong>150</strong></li>
+            <li><svg class="icon"><use href="#i-check"/></svg><span data-i18n="price.mail">رسائل / شهر</span>: <strong>150</strong></li>
+            <li class="off"><svg class="icon"><use href="#i-x"/></svg><span data-i18n="price.rep">متابعة الردود</span></li>
+            <li><svg class="icon"><use href="#i-check"/></svg><span data-i18n="price.sector">تخصيص حسب القطاع</span></li>
+            <li class="off"><svg class="icon"><use href="#i-x"/></svg><span data-i18n="price.mgr">مدير حساب بشري</span></li>
+          </ul>
+          <a class="btn btn--ghost" href="#contact" data-i18n="price.cta">استفسر</a>
+        </div>
+
+        <div class="price-card price-card--hot">
+          <div class="pname" data-i18n="price.p2n">النمو</div>
+          <div class="amount">3 500<span style="font-size:.5em"> د.م</span></div>
+          <div class="per" data-i18n="price.per">/ شهر</div>
+          <ul>
+            <li><svg class="icon"><use href="#i-check"/></svg><span data-i18n="price.lead">آفاق / شهر</span>: <strong>350</strong></li>
+            <li><svg class="icon"><use href="#i-check"/></svg><span data-i18n="price.mail">رسائل / شهر</span>: <strong>350</strong></li>
+            <li><svg class="icon"><use href="#i-check"/></svg><span data-i18n="price.rep">متابعة الردود</span></li>
+            <li><svg class="icon"><use href="#i-check"/></svg><span data-i18n="price.sector">تخصيص حسب القطاع</span></li>
+            <li class="off"><svg class="icon"><use href="#i-x"/></svg><span data-i18n="price.mgr">مدير حساب بشري</span></li>
+          </ul>
+          <a class="btn" href="#contact" data-i18n="price.cta">استفسر</a>
+        </div>
+
+        <div class="price-card">
+          <div class="pname" data-i18n="price.p3n">الاحتواء</div>
+          <div class="amount">6 000<span style="font-size:.5em"> د.م</span></div>
+          <div class="per" data-i18n="price.per">/ شهر</div>
+          <ul>
+            <li><svg class="icon"><use href="#i-check"/></svg><span data-i18n="price.lead">آفاق / شهر</span>: <strong>2060+</strong></li>
+            <li><svg class="icon"><use href="#i-check"/></svg><span data-i18n="price.mail">رسائل / شهر</span>: <strong>2060+</strong></li>
+            <li><svg class="icon"><use href="#i-check"/></svg><span data-i18n="price.rep">متابعة الردود</span></li>
+            <li><svg class="icon"><use href="#i-check"/></svg><span data-i18n="price.sector">تخصيص حسب القطاع</span></li>
+            <li><svg class="icon"><use href="#i-check"/></svg><span data-i18n="price.mgr">مدير حساب بشري</span></li>
+          </ul>
+          <a class="btn btn--ghost" href="#contact" data-i18n="price.cta">استفسر</a>
+        </div>
+
+      </div>
+      <p class="price-note" data-i18n="price.note">الأسعار مقترحة مبدئياً. الأرقام الحقيقية (ردود، مواعيد، صفقات) هي اللي غادي تحدد التسعير النهائي. ما كنبيعوش الوهم.</p>
+    </div>
+  </section>
+
+  <!-- =============================== faq ============================== -->
+  <section id="faq">
+    <div class="shell">
+      <div class="sec-head" style="text-align:center;margin-inline:auto">
+        <span class="tag" data-i18n="faq.tag">أسئلة</span>
+        <h2 data-i18n="faq.h">أسئلة كتسأل</h2>
+      </div>
+      <div class="faq">
+        <div class="faq-item">
+          <button class="faq-q" type="button"><span data-i18n="faq.q1">واش هادشي سبام؟</span><svg class="icon"><use href="#i-chevron-down"/></svg></button>
+          <div class="faq-a"><p data-i18n="faq.a1">لا. عاملين حماية: كل عنوان طاح فالبونس ولا رد بـ «لا» كيتحيد نهائياً. والرسائل مخصصة على القطاع.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button"><span data-i18n="faq.q2">وشنو كيدير ليه بريد Gmail ديالي؟</span><svg class="icon"><use href="#i-chevron-down"/></svg></button>
+          <div class="faq-a"><p data-i18n="faq.a2">كنبعثو من بريدك أنت. هادشي كيعطي مصداقية كبيرة — الرسالة كتجي من نفسك، ماشي من شركة غريبة. بصح كنخدمو بمعدلات آمنة باش ما نوصلوش للحد.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button"><span data-i18n="faq.q3">واش غادي تبعثو من قبل ما نسجل؟</span><svg class="icon"><use href="#i-chevron-down"/></svg></button>
+          <div class="faq-a"><p data-i18n="faq.a3">لا. خاصك تسالي معانا العقد، من بعد كنخدمو على السوق ديالك، وكنعطيوك تقرير الأول.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button"><span data-i18n="faq.q4">شحال كتاخد باش تبدا؟</span><svg class="icon"><use href="#i-chevron-down"/></svg></button>
+          <div class="faq-a"><p data-i18n="faq.a4">لا حاجة. أول تقرير كيوصلك بعد أول دورة. إلا ما عجبك، كتسالي ونكملو طريقنا.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button"><span data-i18n="faq.q5">واش الأرقام اللي كتعطيكم مضمونة؟</span><svg class="icon"><use href="#i-chevron-down"/></svg></button>
+          <div class="faq-a"><p data-i18n="faq.a5">لا، وما غاديش نبيعو ليك وهم. الأرقام الحقيقية هي اللي كتقول الحقيقة — تحكي معانا على أرقامك نتا.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button"><span data-i18n="faq.q6">فأي مدينة خدامين؟</span><svg class="icon"><use href="#i-chevron-down"/></svg></button>
+          <div class="faq-a"><p data-i18n="faq.a6">دابا كنخدمو على كل المدن المغربية، والمحرّك ديالنا كيسحب من الدليل الوطني.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================== cta ============================== -->
+  <section id="contact">
+    <div class="shell">
+      <div class="cta-box">
+        <h2 data-i18n="cta.h">بغيتي تجرب بلا التزام؟</h2>
+        <p data-i18n="cta.p">استفسر، ونتسناو نوريوك كيفاش RAWÂJ كيدوز على سوقك الحقيقي.</p>
+
+        <div class="cta-row">
+          <!-- wa.me opens WhatsApp with the message already typed, so the
+               visitor never faces a blank box. The prefilled text is written
+               per language by site.js; the href here is the Arabic default. -->
+          <a class="btn btn--wa" data-wa href="https://wa.me/212694179018?text=%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%84%D9%89%20RAW%C3%82J" rel="noopener">
+            <svg class="icon"><use href="#i-whatsapp"/></svg>
+            <span data-i18n="cta.btn">راسلنا على واتساب</span>
+          </a>
+          <a class="btn btn--ghost" data-tel href="tel:+212694179018" rel="noopener">
+            <svg class="icon"><use href="#i-phone"/></svg>
+            <span data-i18n="cta.call">عيّط لينا</span>
+          </a>
+        </div>
+
+        <p class="cta-num"><span data-i18n="cta.num">الرقم: </span>
+          <a href="https://wa.me/212694179018" rel="noopener" dir="ltr">+212 694-179018</a>
+        </p>
+
+        <!-- Written form. wa.me and tel: are fine but they only reach a phone
+             that happens to be held; this is the one that writes a lead to the
+             inbox, which is the whole point of the page. The action is filled
+             in by site.js once the page knows it is not opened from file://. -->
+        <form id="contact-form" class="cform" novalidate>
+          <div class="cform-grid">
+            <label class="cfield">
+              <span data-i18n="form.name">الاسم</span>
+              <input type="text" name="name" autocomplete="name" required
+                     maxlength="80" data-i18n-ph="form.namePh" placeholder="اسمك الكامل">
+            </label>
+            <label class="cfield">
+              <span data-i18n="form.business">المحل / الشركة</span>
+              <input type="text" name="business" autocomplete="organization"
+                     maxlength="120" data-i18n-ph="form.bizPh" placeholder="اسم المحل (اختياري)">
+            </label>
+          </div>
+          <label class="cfield">
+            <span data-i18n="form.email">الإيميل</span>
+            <input type="email" name="email" autocomplete="email" required
+                   maxlength="254" dir="ltr" data-i18n-ph="form.emailPh" placeholder="you@example.com">
+          </label>
+          <label class="cfield">
+            <span data-i18n="form.msg">رسالتك</span>
+            <textarea name="message" rows="4" required maxlength="4000"
+                      data-i18n-ph="form.msgPh" placeholder="شنو بغيتي نديرو ليك بالضبط؟"></textarea>
+          </label>
+          <!-- Honeypot. Off-screen, not display:none, and never filled by a
+               person. A bot that posts it is accepted silently and dropped. -->
+          <label class="chp" aria-hidden="true">
+            <span>Leave this empty</span>
+            <input type="text" name="website" tabindex="-1" autocomplete="off">
+          </label>
+          <button class="btn btn--wa cform-btn" type="submit">
+            <svg class="icon"><use href="#i-mail"/></svg>
+            <span data-i18n="form.send">صيفط الرسالة</span>
+          </button>
+          <p class="cform-note" data-i18n="form.note">الجواب كيجيك مباشرة على الإيميل ديالك.</p>
+          <p class="cform-status" id="cform-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="shell">
+    <div>
+      <div class="logo">RAWÂJ<span class="tld">.AI</span></div>
+      <p style="color:var(--dim);font-size:var(--fs-sm);margin-top:.3rem" data-i18n="foot.tagline">رواج حقيقي، بذكاء.</p>
+    </div>
+    <nav class="foot-nav">
+      <a href="privacy.html" data-i18n="foot.privacy">الخصوصية</a>
+      <a href="terms.html" data-i18n="foot.terms">الشروط</a>
+    </nav>
+  </div>
+  <div class="shell">
+    <p class="foot-note">
+      <span data-i18n="foot.ai">رسائلنا كتصرّح بأنها من مساعد ذكي.</span><br />
+      <span data-i18n="foot.fonts">الخطوط: Tajawal و Inter (رخصة SIL OFL). الأيقونات: Lucide (ISC).</span>
+      <br />© <span id="year"></span> RAWÂJ. <span data-i18n="foot.rights">كل الحقوق محفوظة.</span>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

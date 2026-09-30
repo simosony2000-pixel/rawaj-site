@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# Legal pages carry noindex already; there is nothing to hide.

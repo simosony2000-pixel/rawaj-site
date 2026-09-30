@@ -1,0 +1,238 @@
+/* RAWÂJ — product visuals.
+ *
+ * These are HTML/CSS rather than exported PNGs on purpose. A screenshot of a
+ * mock mail client goes soft on a 3x phone screen and cannot be translated,
+ * while the real DOM stays sharp and re-flows for RTL. Only genuinely
+ * raster things (favicon, OG image) are images.
+ */
+
+/* ============================ inbox preview ============================ */
+/* The single most persuasive thing on the page: the prospect's actual view of
+   the message. It is deliberately shown UNROLLED - a collapsed preview would
+   hide the personalisation that is the whole product. */
+.inbox {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, .45);
+  overflow: hidden;
+  max-width: 520px;
+}
+
+.inbox-bar {
+  display: flex; align-items: center; gap: .5rem;
+  padding: .7rem .95rem;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+.inbox-bar .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--border); }
+.inbox-bar .dot:nth-child(1) { background: #FF5F57; }
+.inbox-bar .dot:nth-child(2) { background: #FEBC2E; }
+.inbox-bar .dot:nth-child(3) { background: #28C840; }
+.inbox-bar .addr {
+  margin-inline-start: auto;
+  font-size: var(--fs-xs); color: var(--faint);
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  direction: ltr;
+}
+
+.msg { padding: 1.4rem; }
+.msg-head { display: flex; align-items: flex-start; gap: .85rem; margin-bottom: 1.1rem; }
+.msg-av {
+  flex: 0 0 auto;
+  width: 42px; height: 42px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: rgba(45, 212, 191, .14);
+  color: var(--primary); font-weight: 800; font-size: 1rem;
+}
+.msg-meta { min-width: 0; }
+.msg-from { font-weight: 700; font-size: .95rem; }
+.msg-to { color: var(--faint); font-size: var(--fs-xs); direction: ltr; text-align: start; }
+.msg-subj { font-weight: 700; margin-bottom: .8rem; font-size: 1.02rem; }
+.msg-body { color: var(--dim); font-size: .92rem; line-height: 1.85; }
+.msg-body p { margin-bottom: .7rem; }
+.msg-body .hl { color: var(--text); font-weight: 700; }
+
+/* The AI disclosure. Not decoration: it is the product's differentiator and
+   the promise made in the privacy policy, so it sits in the message itself
+   where the recipient can actually see it. */
+.msg-disclosure {
+  margin-top: 1.1rem; padding: .7rem .85rem;
+  background: rgba(167, 139, 250, .1);
+  border: 1px solid rgba(167, 139, 250, .32);
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-xs); color: #C4B5FD;
+  display: flex; gap: .5rem; align-items: flex-start;
+}
+.msg-disclosure svg { flex: 0 0 auto; margin-top: .18em; color: var(--violet); }
+
+.msg-actions { display: flex; gap: .6rem; margin-top: 1.2rem; }
+.msg-actions .btn { font-size: var(--fs-xs); padding: .55rem 1.1rem; }
+
+/* ============================== stat band ============================== */
+/* Real API figures, not decorative counters. Sourced from
+   /api/sales/status?mission=REAL_SALES_15 - see STATS in the README, and
+   never advertise a revenue number while real_revenue is 0. */
+.stats {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+  margin-top: 2.2rem;
+}
+.stat {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1.1rem 1.2rem;
+}
+.stat .n {
+  font-size: 1.85rem; font-weight: 800; line-height: 1.1;
+  color: var(--primary); font-variant-numeric: tabular-nums;
+}
+.stat .l { color: var(--faint); font-size: var(--fs-xs); margin-top: .3rem; }
+.stat .l svg { color: var(--primary); }
+@media (max-width: 760px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+
+/* ================================ logo ================================ */
+.logo-mark { display: inline-flex; align-items: center; gap: .5rem; }
+.logo-mark img { width: 30px; height: 30px; border-radius: 8px; display: block; }
+.nav .logo-mark img { width: 26px; height: 26px; border-radius: 7px; }
+
+/* ============================== contact ============================== */
+.cta-row { display: flex; gap: .7rem; justify-content: center; flex-wrap: wrap; margin-top: 1.6rem; }
+
+/* WhatsApp green. The bubble icon above is a generic handset, so the colour
+   is what makes the button recognisable rather than the (trademarked) mark. */
+.btn--wa {
+  background: #25D366;
+  color: #05320F;
+  border-color: transparent;
+  box-shadow: 0 10px 30px rgba(37, 211, 102, .22);
+}
+.btn--wa:hover { background: #1EBE5A; color: #05320F; transform: translateY(-2px); }
+
+.cta-num { margin-top: 1rem; color: var(--faint); font-size: var(--fs-sm); }
+.cta-num a { font-weight: 700; color: var(--primary); letter-spacing: .02em; }
+.cta-mail { margin-top: .35rem; color: var(--faint); font-size: var(--fs-sm); }
+.cta-mail a { color: var(--dim); }
+
+@media (max-width: 520px) {
+  .cta-row { flex-direction: column; }
+  .cta-row .btn { width: 100%; justify-content: center; }
+}
+
+/* ============================== sections ============================== */
+/* The hero becomes two columns once there is a real visual to sit beside the
+   copy; below that it stacks, mobile first. */
+.hero-split { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(2rem, 5vw, 3.5rem); align-items: center; }
+@media (max-width: 940px) { .hero-split { grid-template-columns: 1fr; } }
+
+/* ============================== funnel ================================ */
+/* A real diagram, not decoration: each stage states what actually happens. */
+.funnel {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: .6rem;
+  align-items: stretch;
+}
+.funnel-step {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 1.1rem .9rem;
+  position: relative; text-align: center;
+}
+.funnel-step .ic {
+  width: 38px; height: 38px; margin: 0 auto .7rem;
+  border-radius: 10px; display: grid; place-items: center;
+  background: rgba(45, 212, 191, .1); color: var(--primary);
+}
+/* Width tapers so the shape itself reads as a funnel. */
+.funnel-step:nth-child(1) { --w: 100%; }
+.funnel-step:nth-child(2) { --w: 92%; margin-inline: auto; }
+.funnel-step:nth-child(3) { --w: 84%; margin-inline: auto; }
+.funnel-step:nth-child(4) { --w: 76%; margin-inline: auto; }
+.funnel-step:nth-child(5) { --w: 68%; margin-inline: auto; background: rgba(45,212,191,.1); border-color: var(--primary); }
+.funnel-step h4 { font-size: .92rem; font-weight: 700; margin-bottom: .3rem; }
+.funnel-step p { font-size: var(--fs-xs); color: var(--faint); line-height: 1.6; }
+/* Arrow between stages, flipped by direction so RTL points the right way. */
+.funnel-step:not(:last-child)::after {
+  content: '';
+  position: absolute; inset-inline-end: -.45rem; top: 50%;
+  width: .5rem; height: .5rem;
+  border-top: 2px solid var(--primary);
+  border-inline-end: 2px solid var(--primary);
+  transform: translateY(-50%) rotate(45deg);
+  opacity: .6;
+}
+html[dir="ltr"] .funnel-step:not(:last-child)::after { transform: translateY(-50%) rotate(-135deg); }
+@media (max-width: 900px) { .funnel { grid-template-columns: 1fr; } .funnel-step { margin-inline: 0 !important; } }
+
+/* ===================================================== contact form ===== */
+/* Sits under the WhatsApp/call buttons. Those two are instant, this one is
+   for the visitor who is on a laptop at work and does not want to hand over
+   a phone number to a stranger - and it is the one that reaches the inbox. */
+.cform {
+  margin-top: 1.6rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  display: grid;
+  gap: .85rem;
+  text-align: start;
+}
+.cform-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .85rem;
+}
+.cfield { display: grid; gap: .35rem; }
+.cfield > span {
+  font-size: var(--fs-xs);
+  color: var(--faint);
+  font-weight: 600;
+}
+.cfield input,
+.cfield textarea {
+  width: 100%;
+  padding: .78rem .9rem;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font: inherit;
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+  transition: border-color .18s var(--ease), background .18s var(--ease);
+}
+.cfield textarea { resize: vertical; min-height: 6.5rem; }
+.cfield input::placeholder,
+.cfield textarea::placeholder { color: var(--faint); opacity: .75; }
+.cfield input:focus,
+.cfield textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: var(--card);
+}
+.cform-btn {
+  justify-self: start;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  margin-top: .3rem;
+}
+.cform-btn:disabled { opacity: .6; cursor: progress; }
+.cform-note { font-size: var(--fs-xs); color: var(--faint); }
+/* min-height reserves the line so the box does not jump when the text lands */
+.cform-status { font-size: var(--fs-sm); min-height: 1.4em; font-weight: 600; }
+.cform-status.is-ok { color: var(--primary); }
+.cform-status.is-error { color: var(--amber); }
+
+/* Honeypot: pushed out of view rather than display:none, because some bots
+   skip hidden inputs and fill the off-screen ones. aria-hidden keeps it out
+   of the accessibility tree and tabindex=-1 keeps it out of the tab order. */
+.chp {
+  position: absolute;
+  left: -9999px;
+  width: 1px; height: 1px;
+  overflow: hidden;
+}
+@media (max-width: 560px) {
+  .cform-grid { grid-template-columns: 1fr; }
+  .cform-btn { justify-self: stretch; }
+}

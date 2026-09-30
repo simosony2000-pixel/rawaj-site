@@ -1,0 +1,17 @@
+{
+  "name": "RAWÂJ — roواج حقيقي، بذكاء",
+  "short_name": "RAWÂJ",
+  "description": "تسويق خارجي بالذكاء الاصطناعي: آفاق حقيقية، رسائل مخصصة، من بريدك أنت.",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0B1220",
+  "theme_color": "#0B1220",
+  "icons": [
+    { "src": "assets/img/favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/img/favicon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/img/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
